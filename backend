@@ -1,0 +1,9 @@
+backend/
+│
+├── config/            # Налаштування БД
+├── controllers/       # Логіка для маршрутів
+├── models/            # Sequelize-моделі
+├── routes/            # Маршрути (API)
+├── middleware/        # Авторизація, помилки
+├── .env               # Секрети
+├── server.js          # Вхідна точка
