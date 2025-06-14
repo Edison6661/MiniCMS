@@ -1,2 +1,0 @@
-# MiniCMS
-MiniCMS
