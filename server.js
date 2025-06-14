@@ -29,3 +29,6 @@ app.use('/api/auth', authRoutes);
 
 const postRoutes = require('./routes/posts');
 app.use('/api/posts', postRoutes);
+
+const path = require('path');
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
