@@ -21,3 +21,6 @@ Post.belongsTo(User, { foreignKey: 'userId', onDelete: 'CASCADE' });
 User.hasMany(Post, { foreignKey: 'userId' });
 
 module.exports = Post;
+
+Authorization: Bearer <JWT>
+Content-Type; multipart/form-data
