@@ -34,3 +34,15 @@ const upload = multer({
 });
 
 module.exports = upload;
+
+const upload = require('../middleware/upload');
+router.post('/', verifyToken, upload.single('media'), createPost);
+
+const media = req.file ? `/uploads/${req.file.filename}` : null;
+
+router.post('/', verifyToken, upload.single('media'), (req, res, next) => {
+  if (!req.file && req.fileValidationError) {
+    return res.status(400).json({ message: req.fileValidationError });
+  }
+  next();
+}, createPost);
